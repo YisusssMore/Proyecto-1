@@ -1,0 +1,25 @@
+import time
+meme_dict = {
+            "CRINGE": "Algo excepcionalmente raro o embarazoso",
+            "LOL": "Una respuesta común a algo gracioso",
+            }
+print("Hola bienvenido al diccionario")
+print("Tenemos las siguientes palabras")
+print("CRINGE\nLOL")
+while True:
+    time.sleep(1)
+    elegir = input("Deseas seguir usando el diccionario, SI/NO").upper()
+    if elegir == "SI":
+        print("-----------------------------------------------")
+        word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ").upper()
+        time.sleep(1)
+        if word in meme_dict.keys():
+            print(meme_dict[word])
+        else:
+            print("Hay un error en la palabra o no esta en mayusculas")
+    elif elegir == "NO":
+        time.sleep(0.5)
+        print("Gracias por usar el diccionario")
+        time.sleep(1)
+        print("Hasta la proxima :)")
+        break
